@@ -16,10 +16,11 @@ def pagina_login():
                 return
 
             resultado = autenticar(usuario, senha)
-            print(f"Resultado da autenticação: {resultado}")
-            # if "erro" in resultado:
-            #     st.error(resultado["erro"])
-            # else:
-            #     st.session_state["usuario"] = resultado
-            #     st.success(f"Bem-vindo, {resultado['razao_social']}!")
-            #     st.experimental_rerun()
+         
+            if resultado is None:
+                st.error("Usuário ou senha inválidos")  
+            elif "erro" in resultado:
+                st.error(resultado["erro"]) 
+            else:
+                st.session_state["usuario"] = resultado
+                st.rerun()
