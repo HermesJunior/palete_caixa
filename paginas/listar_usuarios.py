@@ -16,7 +16,7 @@ def pagina_listar():
 
     for u in usuarios:
         icone = STATUS_CORES.get(u["status"], ":white_circle:")
-        tipo_badge = ":crown: Admin" if u["tipo"] == "admin" else ":bust_in_silhouette"
+        tipo_badge = ":crown: Admin" if u["tipo"] == "admin" else ":bust_in_silhouette: Regular"
 
         with st.expander(f"{icone} {tipo_badge} {u['razao_social']} "):
             col1, col2 = st.columns(2)
