@@ -5,6 +5,7 @@ from paginas.criar_usuario import pagina_criar
 from paginas.alterar_senha import pagina_alterar_senha
 from paginas.alterar_status import pagina_alterar_status    
 from paginas.deletar_usuario import pagina_deletar
+from paginas.otimizacao import pagina_otimizacao
 
 
 #
@@ -59,11 +60,9 @@ else:
         pagina_alterar_status() 
     elif pagina == "Deletar Usuários":
         pagina_deletar()
+    elif pagina == "Modelo Palete Caixa":
+        pagina_otimizacao()
         
-        
-
-    
-
 
 
 #
